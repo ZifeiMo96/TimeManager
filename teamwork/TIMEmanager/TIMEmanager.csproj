@@ -1,0 +1,315 @@
+﻿<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{26C34BC4-95DC-4329-AD00-BC9B557F9C6F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <AssemblyName>WindowsApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>TIMEmanager</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.11.24.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>packages\HtmlAgilityPack.1.11.24\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=106.11.4.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>packages\RestSharp.106.11.4\lib\net452\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.SQLite, Version=1.0.113.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>packages\System.Data.SQLite.Core.1.0.113.1\lib\net46\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.113.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>packages\System.Data.SQLite.EF6.1.0.113.0\lib\net46\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.113.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>packages\System.Data.SQLite.Linq.1.0.113.0\lib\net46\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="MigrationBackup\4cdf2ee3\TIMEmanger\obj\x86\Debug\TIMEmanger.csproj.CoreCompileInputs.cache" />
+    <None Include="MigrationBackup\4cdf2ee3\TIMEmanger\obj\x86\Debug\TIMEmanger.csprojAssemblyReference.cache" />
+    <None Include="MigrationBackup\4cdf2ee3\TIMEmanger\obj\x86\Release\TIMEmanger.csproj.CoreCompileInputs.cache" />
+    <None Include="MigrationBackup\4cdf2ee3\TIMEmanger\packages.config" />
+    <None Include="MigrationBackup\53d73be8\TIMEmanager\packages.config" />
+    <None Include="MigrationBackup\ca91eb4b\TIMEmanager\packages.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\AddScheduleForm.datasource" />
+    <None Include="Properties\DataSources\ParseTool.datasource" />
+    <None Include="Properties\DataSources\ScheduleInfo.datasource" />
+    <None Include="Properties\DataSources\SQLiteManager.datasource" />
+    <None Include="Properties\DataSources\TIMEmanager.FormPage.CourseShowForm.datasource" />
+    <None Include="Properties\DataSources\TIMEManager.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\TIMEmanager.Properties.Resources1.datasource" />
+    <None Include="Properties\DataSources\TIMEmanger.AccountForm.datasource" />
+    <None Include="Properties\DataSources\TIMEmanger.BO.TaskBO.datasource" />
+    <None Include="Properties\DataSources\TIMEmanger.BO.UserBO.datasource" />
+    <None Include="Properties\DataSources\TIMEmanger.CalendarForm.datasource" />
+    <None Include="Properties\DataSources\TIMEmanger.CalendarService.datasource" />
+    <None Include="Properties\DataSources\TIMEmanger.ClockForm+SetControlValue.datasource" />
+    <None Include="Properties\DataSources\TIMEmanger.ClockForm.datasource" />
+    <None Include="Properties\DataSources\TIMEmanger.ClockService.datasource" />
+    <None Include="Properties\DataSources\TIMEmanger.Entity.Tasks.datasource" />
+    <None Include="Properties\DataSources\TIMEmanger.Entity.User.datasource" />
+    <None Include="Properties\DataSources\TIMEmanger.FormClass.UserService.datasource" />
+    <None Include="Properties\DataSources\TIMEmanger.FormPage.taskAdd.datasource" />
+    <None Include="Properties\DataSources\TIMEmanger.LoginForm.datasource" />
+    <None Include="Properties\DataSources\TIMEmanger.MainForm.datasource" />
+    <None Include="Properties\DataSources\TIMEmanger.MoreItemForm.datasource" />
+    <None Include="Properties\DataSources\TIMEmanger.MoreService.datasource" />
+    <None Include="Properties\DataSources\TIMEmanger.Program.datasource" />
+    <None Include="Properties\DataSources\TIMEmanger.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\TIMEmanger.Properties.Settings.datasource" />
+    <None Include="Properties\DataSources\TIMEmanger.ScheduleForm.datasource" />
+    <None Include="Properties\DataSources\TIMEmanger.ScheduleService.datasource" />
+    <None Include="Properties\DataSources\TIMEmanger.Task.datasource" />
+    <None Include="Properties\DataSources\TIMEmanger.TodoListForm.datasource" />
+    <None Include="Properties\DataSources\TodoListService.datasource" />
+    <None Include="Properties\DataSources\UserCenterFrom.datasource" />
+    <None Include="Properties\Settings.settings" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BO\SQLiteManager.cs" />
+    <Compile Include="BO\TaskBO.cs" />
+    <Compile Include="BO\UserBO.cs" />
+    <Compile Include="Entity\JwUrl.cs" />
+    <Compile Include="Entity\Task.cs" />
+    <Compile Include="Entity\User.cs" />
+    <Compile Include="FormPage\AccountForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPage\AccountForm.Designer.cs">
+      <DependentUpon>AccountForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPage\AddHomeworkForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPage\AddHomeworkForm.Designer.cs">
+      <DependentUpon>AddHomeworkForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPage\AddScheduleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPage\AddScheduleForm.Designer.cs">
+      <DependentUpon>AddScheduleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPage\AddTestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPage\AddTestForm.Designer.cs">
+      <DependentUpon>AddTestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPage\CalendarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPage\CalendarForm.Designer.cs">
+      <DependentUpon>CalendarForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPage\ClockForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPage\ClockForm.Designer.cs">
+      <DependentUpon>ClockForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPage\CourseShowForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPage\CourseShowForm.Designer.cs">
+      <DependentUpon>CourseShowForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPage\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPage\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPage\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPage\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPage\ModifyTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPage\ModifyTask.Designer.cs">
+      <DependentUpon>ModifyTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPage\MoreItemForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPage\MoreItemForm.Designer.cs">
+      <DependentUpon>MoreItemForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPage\ScheduleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPage\ScheduleForm.designer.cs">
+      <DependentUpon>ScheduleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPage\ScheduleInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPage\ScheduleInfo.Designer.cs">
+      <DependentUpon>ScheduleInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPage\taskAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPage\taskAdd.Designer.cs">
+      <DependentUpon>taskAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPage\TodoListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPage\TodoListForm.designer.cs">
+      <DependentUpon>TodoListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPage\UserCenterFrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPage\UserCenterFrom.Designer.cs">
+      <DependentUpon>UserCenterFrom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParseTool.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs" />
+    <Compile Include="Properties\Resources1.Designer.cs" />
+    <Compile Include="Properties\Resources2.Designer.cs" />
+    <Compile Include="Properties\Resources3.Designer.cs" />
+    <Compile Include="Properties\Settings.Designer.cs" />
+    <Compile Include="Properties\Settings1.Designer.cs" />
+    <Compile Include="Service\CalendarService.cs" />
+    <Compile Include="Service\ClockService.cs" />
+    <Compile Include="Service\JiaoWuGetCourse.cs" />
+    <Compile Include="Service\JiaoWuLogin.cs" />
+    <Compile Include="Service\MoreItemService.cs" />
+    <Compile Include="Service\ScheduleService.cs" />
+    <Compile Include="Service\TodoListService.cs" />
+    <Compile Include="Service\UserService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FormPage\AccountForm.resx">
+      <DependentUpon>AccountForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPage\AddHomeworkForm.resx">
+      <DependentUpon>AddHomeworkForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPage\AddScheduleForm.resx">
+      <DependentUpon>AddScheduleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPage\AddTestForm.resx">
+      <DependentUpon>AddTestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPage\CalendarForm.resx">
+      <DependentUpon>CalendarForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPage\ClockForm.resx">
+      <DependentUpon>ClockForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPage\CourseShowForm.resx">
+      <DependentUpon>CourseShowForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPage\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPage\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPage\ModifyTask.resx">
+      <DependentUpon>ModifyTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPage\MoreItemForm.resx">
+      <DependentUpon>MoreItemForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPage\ScheduleForm.resx">
+      <DependentUpon>ScheduleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPage\ScheduleInfo.resx">
+      <DependentUpon>ScheduleInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPage\taskAdd.resx">
+      <DependentUpon>taskAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPage\TodoListForm.resx">
+      <DependentUpon>TodoListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPage\UserCenterFrom.resx">
+      <DependentUpon>UserCenterFrom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MigrationBackup\4cdf2ee3\TIMEmanger\NuGetUpgradeLog.html" />
+    <Content Include="MigrationBackup\4cdf2ee3\TIMEmanger\TIMEmanger.csproj" />
+    <Content Include="MigrationBackup\53d73be8\TIMEmanager\NuGetUpgradeLog.html" />
+    <Content Include="MigrationBackup\53d73be8\TIMEmanager\TIMEmanager.csproj" />
+    <Content Include="MigrationBackup\ca91eb4b\TIMEmanager\NuGetUpgradeLog.html" />
+    <Content Include="MigrationBackup\ca91eb4b\TIMEmanager\TIMEmanager.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="MigrationBackup\4cdf2ee3\TIMEmanger\bin\Debug\" />
+    <Folder Include="MigrationBackup\4cdf2ee3\TIMEmanger\bin\Release\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\System.Data.SQLite.Core.1.0.113.1\build\net46\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\System.Data.SQLite.Core.1.0.113.1\build\net46\System.Data.SQLite.Core.targets'))" />
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="packages\System.Data.SQLite.Core.1.0.113.1\build\net46\System.Data.SQLite.Core.targets" Condition="Exists('packages\System.Data.SQLite.Core.1.0.113.1\build\net46\System.Data.SQLite.Core.targets')" />
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>

@@ -1,0 +1,183 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{7E7D4174-0ECB-4C8B-AEBF-BB5A24CD75AA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <AssemblyName>WindowsApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>TIMEmanger</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\TodoListService.datasource" />
+    <None Include="Properties\Settings.settings" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BO\TaskBO.cs" />
+    <Compile Include="BO\UserBO.cs" />
+    <Compile Include="DAO\TaskDAO.cs" />
+    <Compile Include="DAO\UserDAO.cs" />
+    <Compile Include="DTO\TaskDTO.cs" />
+    <Compile Include="DTO\UserDTO.cs" />
+    <Compile Include="Entity\Task.cs" />
+    <Compile Include="Entity\User.cs" />
+    <Compile Include="FormPage\AccountForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPage\AccountForm.Designer.cs">
+      <DependentUpon>AccountForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPage\AddScheduleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPage\AddScheduleForm.Designer.cs">
+      <DependentUpon>AddScheduleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPage\CalendarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPage\CalendarForm.Designer.cs">
+      <DependentUpon>CalendarForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPage\ClockForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPage\ClockForm.Designer.cs">
+      <DependentUpon>ClockForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPage\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPage\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPage\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPage\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPage\MoreItemForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPage\MoreItemForm.Designer.cs">
+      <DependentUpon>MoreItemForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPage\ScheduleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPage\ScheduleForm.designer.cs">
+      <DependentUpon>ScheduleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPage\taskAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPage\taskAdd.Designer.cs">
+      <DependentUpon>taskAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPage\TodoListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPage\TodoListForm.designer.cs">
+      <DependentUpon>TodoListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPage\UserCenterFrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPage\UserCenterFrom.Designer.cs">
+      <DependentUpon>UserCenterFrom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs" />
+    <Compile Include="Properties\Resources1.Designer.cs" />
+    <Compile Include="Properties\Resources2.Designer.cs" />
+    <Compile Include="Properties\Settings.Designer.cs" />
+    <Compile Include="Service\CalendarService.cs" />
+    <Compile Include="Service\ClockService.cs" />
+    <Compile Include="Service\MoreItemService.cs" />
+    <Compile Include="Service\ScheduleService.cs" />
+    <Compile Include="Service\TodoListService.cs" />
+    <Compile Include="Service\UserService.cs" />
+    <Compile Include="SQLiteManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FormPage\AccountForm.resx">
+      <DependentUpon>AccountForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPage\AddScheduleForm.resx">
+      <DependentUpon>AddScheduleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPage\CalendarForm.resx">
+      <DependentUpon>CalendarForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPage\ClockForm.resx">
+      <DependentUpon>ClockForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPage\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPage\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPage\MoreItemForm.resx">
+      <DependentUpon>MoreItemForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPage\ScheduleForm.resx">
+      <DependentUpon>ScheduleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPage\taskAdd.resx">
+      <DependentUpon>taskAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPage\TodoListForm.resx">
+      <DependentUpon>TodoListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPage\UserCenterFrom.resx">
+      <DependentUpon>UserCenterFrom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="pic.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+</Project>
